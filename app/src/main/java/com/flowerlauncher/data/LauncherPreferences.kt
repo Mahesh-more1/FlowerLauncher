@@ -44,7 +44,7 @@ class LauncherPreferences(context: Context) {
         if (raw != null) {
             try {
                 return json.decodeFromString(raw)
-            } catch (_: Exception) {}
+            } catch (e: Exception) {}
         }
         // Defaults matching reference app
         return listOf(
@@ -122,19 +122,19 @@ class LauncherPreferences(context: Context) {
             val map: Map<String, String> = json.decodeFromString(jsonString)
             map["themeMode"]?.let { themeMode = it }
             map["homeLayoutStyle"]?.let {
-                try { homeLayoutStyle = HomeLayoutStyle.valueOf(it) } catch (_: Exception) {}
+                try { homeLayoutStyle = HomeLayoutStyle.valueOf(it) } catch (e: Exception) {}
             }
             map["flowerArcApps"]?.let {
-                try { setFlowerArcApps(json.decodeFromString(it)) } catch (_: Exception) {}
+                try { setFlowerArcApps(json.decodeFromString(it)) } catch (e: Exception) {}
             }
             map["categories"]?.let {
-                try { saveCategories(json.decodeFromString(it)) } catch (_: Exception) {}
+                try { saveCategories(json.decodeFromString(it)) } catch (e: Exception) {}
             }
             map["categoryOverrides"]?.let {
                 try {
                     val overrides: Map<String, String> = json.decodeFromString(it)
                     prefs.edit().putString("key_category_overrides", json.encodeToString(overrides)).apply()
-                } catch (_: Exception) {}
+                } catch (e: Exception) {}
             }
             true
         } catch (e: Exception) {

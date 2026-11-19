@@ -53,7 +53,7 @@ class AppDiscoveryRepository(private val context: Context) {
                 try {
                     val icon = resolveInfo.loadIcon(packageManager)
                     iconCache[key] = icon
-                } catch (_: Exception) {}
+                } catch (e: Exception) {}
             }
 
             // Check categorization

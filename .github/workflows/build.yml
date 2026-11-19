@@ -35,23 +35,11 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build debug APK
-        run: |
-          ./gradlew :app:assembleDebug --no-daemon --stacktrace 2>&1 | tee build_output.log
-          echo "=== Generated APKs ==="
-          find app/build/outputs -type f -name "*.apk" -ls || true
-
-      - name: Upload build log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-log-${{ github.sha }}
-          path: build_output.log
-          retention-days: 7
+        run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
 
       - name: Upload debug APK
-        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: flowerlauncher-debug-${{ github.sha }}
-          path: app/build/outputs/apk/**/*.apk
+          path: app/build/outputs/apk/debug/*.apk
           retention-days: 7

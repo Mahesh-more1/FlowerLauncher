@@ -160,7 +160,7 @@ class FlowerLauncherViewModel(application: Application) : AndroidViewModel(appli
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK
             }
             context.startActivity(intent)
-        } catch (_: Exception) {}
+        } catch (e: Exception) {}
     }
 
     fun uninstallApp(packageName: String) {
@@ -170,7 +170,7 @@ class FlowerLauncherViewModel(application: Application) : AndroidViewModel(appli
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK
             }
             context.startActivity(intent)
-        } catch (_: Exception) {}
+        } catch (e: Exception) {}
     }
 
     fun updateAppCategory(packageName: String, categoryId: String) {
@@ -235,7 +235,7 @@ class FlowerLauncherViewModel(application: Application) : AndroidViewModel(appli
             val statusBarManager = Class.forName("android.app.StatusBarManager")
             val method = statusBarManager.getMethod("expandNotificationsPanel")
             method.invoke(statusBarService)
-        } catch (_: Exception) {}
+        } catch (e: Exception) {}
     }
 
     private fun lockScreen() {

@@ -45,6 +45,6 @@ class FlowerNotificationListenerService : NotificationListenerService() {
                 }
             }
             _notificationCounts.value = counts
-        } catch (_: Exception) {}
+        } catch (e: Exception) {}
     }
 }
