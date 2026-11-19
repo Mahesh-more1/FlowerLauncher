@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.sp
 import com.flowerlauncher.ui.FlowerLauncherViewModel
 import com.flowerlauncher.ui.components.AppIconItem
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchPanelScreen(
     viewModel: FlowerLauncherViewModel,

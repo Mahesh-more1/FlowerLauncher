@@ -153,7 +153,7 @@ fun SystemStatusCard() {
                 Text("Device & Launcher Status", fontWeight = FontWeight.Bold, color = Color.White, fontSize = 18.sp)
             }
 
-            Divider(color = Color.White.copy(alpha = 0.1f))
+            HorizontalDivider(color = Color.White.copy(alpha = 0.1f))
 
             Text("Launcher Memory Usage: $usedMemory MB / $totalMemory MB", color = Color.White)
             Text("Processors: ${runtime.availableProcessors()} Cores", color = Color.White)

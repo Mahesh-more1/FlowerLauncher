@@ -87,7 +87,7 @@ fun SettingsScreen(
                             }
                         }
 
-                        Divider(modifier = Modifier.padding(vertical = 12.dp), color = Color.White.copy(alpha = 0.1f))
+                        HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp), color = Color.White.copy(alpha = 0.1f))
 
                         // Home Layout Style Selector
                         Text("Home Screen Layout Style", color = Color.White, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
@@ -130,7 +130,7 @@ fun SettingsScreen(
                             Icon(Icons.Default.ChevronRight, contentDescription = null, tint = Color.White.copy(alpha = 0.5f))
                         }
 
-                        Divider(modifier = Modifier.padding(vertical = 8.dp), color = Color.White.copy(alpha = 0.1f))
+                        HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp), color = Color.White.copy(alpha = 0.1f))
 
                         Row(
                             modifier = Modifier
@@ -174,7 +174,7 @@ fun SettingsScreen(
                             }
                         }
 
-                        Divider(modifier = Modifier.padding(vertical = 8.dp), color = Color.White.copy(alpha = 0.1f))
+                        HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp), color = Color.White.copy(alpha = 0.1f))
 
                         Row(
                             modifier = Modifier
